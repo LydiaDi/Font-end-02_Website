@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡型事件</title>
+</head>
+<script type="text/javascript">
+function add (sText) {
+	var oDiv=document.getElementById('display');
+	oDiv.innerHTML+=sText;
+	// body...
+}
+</script>
+<body onclick="add('body<br>');">
+<h2><a href="../../../index.html">返回首页</a></h2>
+   <div onclick="add('div<br>');">
+      <p onclick="add('p<br>');">click me</p>
+   </div>	
+   <div id="display"></div>
+</body>
+</html>

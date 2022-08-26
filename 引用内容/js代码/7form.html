@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+*{background-color: pink;}
+#code{
+	width: 100px;
+	height: 50px;
+	background:lightblue;
+	font-size:43px;
+	letter-spacing: 5px; 
+    }
+form{
+	  /*居中对齐*/
+	  height: 40px;
+      line-height: 40px;
+      display:inline-block;
+	  text-align-last: justify;
+	}
+
+
+</style>
+</head>
+<script type="text/javascript">
+function creatRndCode () 
+{
+  var chars=['4','5','6','1','2','3'];
+  var randCode="";
+  for(var i = 0; i <3; i++) 
+  {
+	var randPos=Math.floor(Math.random()*(chars.length));
+	randCode+=chars[randPos];
+  }
+  document.getElementById("code").innerHTML=randCode;
+}
+
+
+function myCheck()
+{
+  for(var i=0;i<document.form1.elements.length-1;i++)
+    {
+      if(document.form1.elements[i].value=="")
+      {
+         alert("当前表单不能有空项");
+         document.form1.elements[i].focus();
+         return false;
+       }
+     }
+  return true;
+
+}
+</script>
+
+</script>
+<body>
+<h2><a href="../../index.html">返回首页</a></h2>
+<div id="one">
+	
+    <form name="form1" onSubmit="return myCheck()">
+	<p>账户：<input type="text" name="userName"/></p>
+	<p>密码：<input type="password" name="userPsd"/></p>
+	<p>电子邮件：<input type="text" /></p>
+    <p>验证码：<input type="text" /></p>
+    <div id="code"></div>
+ 
+    <p><input type="button" onclick="creatRndCode()" value="生成验证码"></p>
+    <p><input type="submit" value="提交"/></p>
+	</form>
+
+</div>	
+	
+</body>
+</html>

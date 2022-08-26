@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body oncload="init()">
+<h2><a href="../../../index.html">返回首页</a></h2>
+<p onclick="setInterval(move,1000);">单击这里，窗口移动</p>
+	<script type="text/javascript">
+function init(){window.moveTo(100,100);
+window.resizeTo(300,200);}
+function move(){window.moveBy(10,10);
+window.resizeBy(10,10);}
+
+	</script>
+
+</body>
+</html>

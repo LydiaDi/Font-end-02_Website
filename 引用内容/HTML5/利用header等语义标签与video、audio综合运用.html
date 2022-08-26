@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+    #header{text-align: center;}
+    #nav{height: 70px;width:1200px;margin: 0 auto;}
+    table{margin: 0 auto;width:100%;}
+    #nave1{float: left;}
+    #nave2{float: left;}
+    #nave3{float: left;}
+    #side{float:right;width: 300px;}
+    #my{border: 1px  solid red;}
+    #a{height: 500px;width: 800px;}
+	</style>
+ 
+
+</head>
+<body>
+<h2><a href="../../index.html">返回首页</a></h2>
+<header id="header"><h1>首页</h1></header>
+<nav id="nav">
+	
+    <table>
+    <tr>
+    <td><a href="#">动画</a></td>
+    <td><a href="#">音乐</a></td>
+    <td><a href="#">舞蹈</a></td>
+    <td><a href="#">科技</a></td>
+    <td><a href="#">生活</a></td>
+    <td><a href="#">时尚</a></td>
+    <td><a href="#">娱乐</a></td>
+    <td><a href="#">放映厅</a> </td>
+    <td><a href="#">动物圈</a></td>
+    </tr>  
+
+    <tr>
+    <td><a href="#">番剧</a></td>
+    <td><a href="#">国创</a></td>   
+    <td><a href="#">游戏</a></td>
+    <td><a href="#">数码</a></td>
+    <td><a href="#">鬼畜</a></td>
+    <td><a href="#">广告</a></td>
+    <td><a href="#">影视</a></td>
+    <td><a href="#">搞笑</a></td>
+    <td><a href="#">美食圈</a></td>
+    </tr>
+
+ </table>
+
+</nav>
+
+<content>
+
+<section>
+
+   <video id="nave1" src="videos/a.mp4" width="350" height="400"></video>
+   <button onclick="playPause1()">播放/暂停</button>
+
+   <video id="nave2" src="videos/b.mp4" width="350" height="400"></video>
+   <button onclick="playPause2()">播放/暂停</button> 
+
+   <video id="nave3" src="videos/c.mp4" width="350" height="400"></video>
+   <button onclick="playPause3()">播放/暂停</button> 
+</section>    
+</content>
+
+ <aside id="side">
+
+      <h1>排行榜</h3>
+      <ol>
+          <li>【四月新番？】钉钉动画华决定！！ </li>
+          <li>四月番毒奶安利，四月看这八部动画就够了… </li>
+          <li>【自夸小队】像素版MV </li>
+          <li>【车万MAD】魔理沙偷走了重要的东西</li>
+          <li>【科普】什么是OVA？  </li>
+          <li>对不起，还没有给大家一个完美地结束！</li>
+          <li>这就是史上最烂的动画片吗？我见识到了</li>
+          <li>【全程高燃】前锋高能！全英灵宝具展开！！</li>
+          <li>再次炸裂的主线信息！柯南...</li>
+      </ol>
+ </aside>
+
+<script type="text/javascript">
+      var a=document.getElementById("nave1");
+      function playPause1()
+      {if(a.paused)
+          a.play();
+       else
+          a.pause();
+      }
+       var b=document.getElementById("nave2");
+      function playPause2()
+      {if(b.paused)
+          b.play();
+       else
+          b.pause();
+      }
+
+      var c=document.getElementById("nave3");
+      function playPause3()
+      {if(c.paused)
+          c.play();
+       else
+          c.pause();
+      }
+
+
+
+/*
+  var canvas,pen;
+    
+        canvas=document.getElementById("my");
+        pen=canvas.getContext('2d');
+        
+        pen.lineWidth=5;
+        pen.strokeStyle="red";
+
+        var mousePress=false;
+        var last=null;
+
+        function pos (event) {
+          var ex,ey;
+          ex=event.clientX;
+          ey=event.clientY;
+          return {
+            x:ex,
+            y:ey
+          }
+         }
+
+         function start (event) {
+          mousePress=true;
+         }
+         function draw (event) {
+          if(!mousePress) return;
+          var xy=pos(event);
+            if(last!=null){
+            pen.beginPath();
+            pen.moveTo(last.x,last.y);
+            pen.lineTo(xy.x,xy.y);
+            pen.stroke();
+          }
+          last=xy;
+         }
+
+         function finish (event) {
+          mousePress=false;
+          last=null;
+         }
+        canvas.onmousedown=start;
+        canvas.onmousemove=draw;
+        canvas.onmouseup=finish;  
+*/
+</script>
+<footer id="footer">
+	<audio src="audios/1.mp4" controls="controls">
+		浏览器不支持
+	</audio>
+
+</footer>
+
+<!--
+<div id="a"><canvas id="my" width="800" height="500">不支持</canvas>	 
+</div>
+-->
+
+</body>
+</html>

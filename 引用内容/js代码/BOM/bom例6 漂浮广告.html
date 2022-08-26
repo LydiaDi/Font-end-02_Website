@@ -1,0 +1,43 @@
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<style type="text/css">
+ img{width: 100px;
+  height: 100px;}</style>
+<title>漂浮广告</title>
+</head>
+<body>
+<h2><a href="../../../index.html">返回首页</a></h2>
+	<div id="Ad" style="position:absolute">
+	<a href="http://desk.zol.com.cn/bizhi/8943_109845_2.html" target="_blank"><img src="images/1.png" boder="0"></a></div>
+	<script type="text/javascript">
+var x=50,y=60;
+var xin=true,yin=true;
+var step=1;
+var obj=document.getElementById("Ad");
+function floatAd()
+{   var L=T=0;  
+	var R=document.body.clientWidth-obj.offsetWidth;
+	var B=document.body.clientHeight-obj.offsetHeight;
+	obj.style.left=x+document.documentElement.scrollLeft;
+	obj.style.top=y+document.documentElement.scrollTop;
+	x=x+(xin?1:-1);
+	if (x<L) {xin=true;x=L;}
+	if (x>R) {xin=false;x=R;}
+	y=y+(yin?1:-1);
+	if (y<T) {yin=true;y=T;}
+	if (y>B) {yin=false;y=B;}
+
+}	
+var itl=setInterval("floatAd()",0.1);
+obj.onmouseover=function(){clearInterval(itl)}
+obj.onmouseout=function(){itl=setInterval("floatAd()",10)}
+
+</script>
+
+
+
+</body>
+</html>

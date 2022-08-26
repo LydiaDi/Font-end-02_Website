@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>  
+     <head>  
+     <meta charset="utf-8">
+     <title> en </title>  
+     <style type="text/css">
+     #one{
+      height: 100px;
+      width: 100px;}
+     </style>
+     </head>  
+     <body> 
+     <h2><a href="../../index.html">返回首页</a></h2>
+     <img src="images/1.png" id="one" >
+     <script >
+         var a=document.getElementById("one");
+         a.onmouseover=changeone;
+         function changeone() 
+         {
+            a.src="images/2.png";  
+            a.style.border="10px solid blue"; 
+            a.style.height="200px";
+            a.style.width="200px";      
+          }                   
+         a.onmouseout= changetwo;
+         function changetwo() 
+         {       
+            a.src="images/1.png"; 
+            a.style.border="0";
+            a.style.height="100px";
+            a.style.width="100px";
+          }                  
+    </script>             
+    </body>  
+</html> 

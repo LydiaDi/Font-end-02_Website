@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <style type="text/css">
+ *{background: pink;}
+ img{width: 300px;
+     height: 300px;}</style>
+ 
+ <title>漂浮广告</title>
+</head>
+
+<body >
+<h2><a href="../../../index.html">返回首页</a></h2>
+<b onclick="popwin()">点击</b><br>
+
+<p onclick="setInterval(move,1000);">单击这里，窗口移动</p>
+
+<select name="select" onchange="window.location.herf=this.options[this.selectedIndex].value">
+<option>请选择需要的网址</option>
+<option value="https://www.sohu.com/">搜狐</option>
+<option value="https://www.sina.com.cn/">新浪</option>
+<option value="https://www.msn.cn/zh-cn">MSN中国</option></select>  
+<div id="Ad" style="position:absolute">
+  <a href="https://cn.bing.com/?pc=U528" target="_blank">
+  <img src="images/1.png"></a>
+</div>
+
+
+<script type="text/javascript">
+function init(){window.moveTo(100,100);
+window.resizeTo(300,200);}
+function move(){window.moveBy(10,10);
+window.resizeBy(10,10);}
+</script>
+  
+<script type="text/javascript">
+  function popwin(){var oWin=window.open("http://desk.zol.com.cn/bizhi/8943_109845_2.html","new,parent","width=400,height300");
+  oWin.resizeBy(600,400);
+  oWin.moveTo(100,100);
+   }
+</script>
+
+<script type="text/javascript">
+     var x=50,y=60;
+     var xin=true,yin=true;
+     var step=1;
+     var obj=document.getElementById("Ad");
+     function floatAd(){
+        var L=T=0;
+        var R=document.body.clientWidth-obj.offsetWidth;
+        var B=document.body.clientHeight-obj.offsetHeight;
+        obj.style.left=x+document.documentElement.scrollLeft;
+        obj.style.top=y+document.documentElement.scrollTop;
+        x=x+step*(xin?1:-1);
+        if(x<L){xin=true;x=L;}
+        if(x>R){xin=false;x=R;}
+        y=y+step*(yin?1:-1);
+        if(y<T){yin=true;y=T;}
+        if(y>B){yin=false;y=B;}
+     }
+     var itl=setInterval("floatAd()",0.1);
+     obj.onmouseover=function(){clearInterval(itl)}
+     obj.onmouseout=function(){itl=setInterval("floatAd()",0.1)}
+ </script> 
+ 
+</body>
+</html>

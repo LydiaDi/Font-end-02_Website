@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打字机</title>
+</head>
+<body onload="setInterval(trim,200)">
+<h2><a href="../../../index.html">返回首页</a></h2>
+<p id="exp"></p>
+<script type="text/javascript">
+	var exp=document.getElementById("exp");
+	var str="函数就像是一台机器，它对输入的数据进行加工在再输出需要的数据";
+	var y=1;
+	function trim()
+	{var trimstr=str.substring(0,y);
+		exp.innerHTML=trimstr;
+		if(y<str.length)y++;
+		else clearInterval(setInterval(trim,100));}
+</script>
+	
+</body>
+</html>

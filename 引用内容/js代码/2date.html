@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+
+</head>
+<body>
+<h2><a href="../../index.html">返回首页</a></h2>
+<script type="text/javascript">
+var a=new Date();
+document.write("The time is<br/>"+Date());
+
+var b=a.getHours();
+document.write("<br/><br/>");
+if (b>=6&&b<=11)document.write("Good moring");
+else if(b>=12&&b<=13)document.write("Good noon");
+else if(b>=13&&b<=18)document.write("Good afternoon");
+else document.write("Good night");
+
+</script>
+<br/>
+<button onclick="window.location='3multiplication table.html'">转到乘法表</button>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>猜字游戏</title>
+</head>
+<body>
+<h2><a href="../../index.html">返回首页</a></h2>
+<script type="text/javascript">
+	var a=parseInt(Math.random()*100);
+	
+	do{
+	var b=prompt("请您输入一个整数");
+    if(b>a) alert("您输入的数字大了");
+	  else if(b<a) alert("您输入的数字小了");
+	    else alert("您输对了");
+
+      }while(a!=b);
+
+</script>
+	
+</body>
+</html>
